@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <springProfile name="dev">
-        <include resource="logback-console.xml" />
-        <include resource="logback-file-appender.xml" />
+        <include resource="logback/logback-console.xml" />
+        <include resource="logback/logback-file-appender.xml" />
 
         <root level="debug">
             <appender-ref ref="STDOUT"/>
@@ -11,8 +11,8 @@
     </springProfile>
 
     <springProfile name="prod">
-        <include resource="logback-console.xml" />
-        <include resource="logback-rolling-file-appender.xml" />
+        <include resource="logback/logback-console.xml" />
+        <include resource="logback/logback-rolling-file-appender.xml" />
 
         <root level="info">
             <appender-ref ref="STDOUT"/>
