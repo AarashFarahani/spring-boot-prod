@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProfile name="dev">
+        <include resource="logback-console.xml" />
+        <include resource="logback-file-appender.xml" />
+
+        <root level="debug">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="SAVE-TO-FILE"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="prod">
+        <include resource="logback-console.xml" />
+        <include resource="logback-rolling-file-appender.xml" />
+
+        <root level="info">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="SAVE-TO-FILE"/>
+        </root>
+    </springProfile>
+</configuration>
